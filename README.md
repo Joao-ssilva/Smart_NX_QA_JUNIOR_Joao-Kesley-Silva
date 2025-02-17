@@ -20,11 +20,12 @@ Antes de rodar os testes, certifique-se de ter as seguintes ferramentas instalad
 ## Instalação
 1. **Clone o repositório do projeto**:
    https://github.com/Joao-ssilva/Smart_NX_QA_JUNIOR_Joao-Kesley-Silva.git
+   `git clone <Link do projeto> `
 
-2. Navegue até o diretório do projeto:
+3. Navegue até o diretório do projeto:
   `cd <NOME_DO_PROJETO> `
 
-3. Instale as dependências do projeto:
+4. Instale as dependências do projeto:
 Se estiver utilizando o Yarn:
   ` yarn install `
 Ou, caso use npm:
