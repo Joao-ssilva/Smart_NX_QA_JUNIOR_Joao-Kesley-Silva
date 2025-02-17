@@ -19,7 +19,7 @@ Antes de rodar os testes, certifique-se de ter as seguintes ferramentas instalad
 
 ## Instalação
 1. **Clone o repositório do projeto**:
-   https://github.com/Joao-ssilva/Smart_NX_QA_JUNIOR_Joao-Kesley-Pinheiro/compare/master?expand=1
+   https://github.com/Joao-ssilva/Smart_NX_QA_JUNIOR_Joao-Kesley-Silva.git
 
 2. Navegue até o diretório do projeto:
   `cd <NOME_DO_PROJETO> `
