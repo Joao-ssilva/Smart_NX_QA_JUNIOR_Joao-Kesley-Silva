@@ -1,0 +1,14 @@
+{
+  "name": "testecni",
+  "version": "1.0.0",
+  "description": "Desafio técnico smartnx",
+  "main": "index.js",
+  "author": "Joao Silva",
+  "license": "MIT",
+  "dependencies": {
+    "cypress": "^14.0.3"
+  },
+  "devDependencies": {
+    "cypress-xpath": "^2.0.1"
+  }
+}
