@@ -2,12 +2,8 @@
 import { employee } from '../e2e/elements/datas'
 
 describe('Exclusão de Employee no módulo PIM do OrangeHRM', () => {
-    const dataEmployee = {
-        firstName: 'Paulo',
-        middleName: 'Victor',
-        lastName: 'Silva',
-        id: '119067'
-    }
+    
+
 
     context('Clicar no ícone de lixeira e cancelar a exclusão, garantindo que o employee não foi excluído', () => {
         after(() => {
@@ -24,16 +20,16 @@ describe('Exclusão de Employee no módulo PIM do OrangeHRM', () => {
             cy.contains('Employee List').should('be.visible').click()
         })
     
-        it(`E há um employee "${dataEmployee.firstName}" cadastrado`, () => {
+        it(`E há um employee "${employee.firstName}" cadastrado`, () => {
             cy.contains('Employee List').should('be.visible').click()
             cy.get(':nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-autocomplete-wrapper > .oxd-autocomplete-text-input > input')
-                .type(`${dataEmployee.firstName} ${dataEmployee.middleName}`)
+                .type(`${employee.firstName} ${employee.middleName}`)
             cy.contains('button', 'Search').click()
-            cy.get('.oxd-table-card').should('contain.text', dataEmployee.firstName)
+            cy.get('.oxd-table-card').should('contain.text', employee.firstName)
         })   
 
-        it(`Quando o usuário clica no ícone de lixeira ao lado do nome do employee "${dataEmployee.firstName}"`, () => {
-            cy.contains(`${dataEmployee.firstName}`) 
+        it(`Quando o usuário clica no ícone de lixeira ao lado do nome do employee "${employee.firstName}"`, () => {
+            cy.contains(`${employee.firstName}`) 
             cy.get('.oxd-table-cell-actions')
             .find('.oxd-icon.bi-trash')
             .click()
@@ -43,8 +39,8 @@ describe('Exclusão de Employee no módulo PIM do OrangeHRM', () => {
             cy.contains('button', 'No, Cancel').click()
         })
     
-        it(`Então o sistema não deve excluir o employee "${dataEmployee.firstName}"`, () => {
-            cy.get('.oxd-table-card').should('contain.text', `${dataEmployee.firstName}`)
+        it(`Então o sistema não deve excluir o employee "${employee.firstName}"`, () => {
+            cy.get('.oxd-table-card').should('contain.text', `${employee.firstName}`)
         })
     }) 
 

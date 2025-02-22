@@ -3,7 +3,7 @@ import { employee } from '../e2e/elements/datas'
 
 describe('Filtros de "Employee"', () => {
 
-    context('Pesquisar um employee pelo nome', () => {
+    context.only('Pesquisar um employe,e pelo nome', () => {
         after(() => {
             cy.clearLocalStorage()
             cy.clearCookies()
@@ -28,14 +28,14 @@ describe('Filtros de "Employee"', () => {
         })
     })
 
-    context.only('Pesquisar um employee pelo ID', () => {
+    context('Pesquisar um employee pelo ID', () => {
         after(() => {
             cy.clearLocalStorage()
             cy.clearCookies()
         })
         const employeee = {
             name: 'Paulo',
-                   id: '119067'
+            id: '119067'
  }
 
         it('Dado que o usuário está logado no OrangeHRM e acessa o módulo "PIM"', () => {

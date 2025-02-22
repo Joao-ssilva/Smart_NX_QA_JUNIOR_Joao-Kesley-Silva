@@ -1,14 +1,14 @@
 Cypress.Commands.add('fazerLogin', (user, senha) => {
-    cy.visit('/');
+    cy.visit('/')
     
     cy.get('input[name="username"]').type(user)
     cy.get('input[type="password"]').type(senha)
 
     cy.contains('button', 'Login').click()
 
-    cy.contains('header', 'Dashboard').should('be.visible')
-});
-
+    cy.get('.oxd-userdropdown-tab')
+        .should('be.visible')
+})
 Cypress.Commands.add('acessarModulo', (nameMod) => {
     cy.get('.oxd-main-menu-item').contains(nameMod).click() 
     cy.get('.oxd-topbar-body-nav-tab').contains('Employee List').click()
@@ -31,4 +31,3 @@ Cypress.Commands.add('criarNovoEmployeeSemLogin', (fristName, middleName, lastna
     cy.contains('Successfully Saved')
     .should('be.visible')
 })
-

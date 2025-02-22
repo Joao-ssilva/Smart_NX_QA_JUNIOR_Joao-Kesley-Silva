@@ -107,7 +107,7 @@ describe('Módulo "PIM"', () => {
                 .should('contain.text', 'PIM')
         })
 
-        it('E o fundo do item "PIM" deve estar na cor laranja', () => {
+        it('E o fundo do item "PIM" deve estar na cor laranja ou uma cor de fundo, identifcado que esta ativo', () => {
             cy.get('.oxd-main-menu-item.active')
                 .contains('PIM')
                 .should('be.visible')
